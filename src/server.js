@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import categoriesRoute from "./Routes/categoriesRoute.js";
 import customerRoute from "./Routes/customerRoute.js";
+import gamesRoute from "./Routes/gamesRoute.js";
+import rentalsRoute from "./Routes/rentalsRoute.js";
 
 const app = express();
 
@@ -12,6 +14,8 @@ app.use(express.json());
 
 app.use(categoriesRoute);
 app.use(customerRoute);
+app.use(gamesRoute);
+app.use(rentalsRoute);
 
 const PORT = process.env.PORT || 4000;
 
